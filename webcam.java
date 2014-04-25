@@ -7,18 +7,26 @@ import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JButton;
 import javax.imageio.ImageIO;
 import java.lang.Thread;
-import java.awt.*;
+import java.awt.Container;
+import java.awt.event.*;
 
 
 
 public class webcam {
+
     public static void main(String[] args) {
 	BufferedImage image=null;
 	String IP="10.14.104.30"; 
 	String PORT="81";
 	JFrame frames= new JFrame("WebCamera");
+	//JButton UP=new JButton("UP");
+	//JPanel panel=
+	//DOWN=new JButton("DOWN");
+	//LEFT=new JButton("LEFT");
+	//RIGHT=new JButton("RIGHT");
 	frames.setLocation(300,300);
 	frames.setSize(640,480);
 	frames.setResizable(false);
@@ -33,6 +41,7 @@ public class webcam {
 	    }
 	    JLabel label = new JLabel(new ImageIcon(image));
 	    frames.add(label);
+	    //frames.add(UP);
 	    frames.setVisible(true);
 	    frames.setDefaultCloseOperation(frames.EXIT_ON_CLOSE);
 	    try {
