@@ -9,7 +9,7 @@ public class webcam {
     public static void main(String[] args) {
 	BufferedImage image=null;
 	String IP="10.14.104.30"; 
-	String PORT="81"
+	String PORT="81";
 	try {
 	    URL url=new URL("http://"+IP+":"+PORT+"/snapshot.cgi?user=admin&pwd=2626");
 	    image = ImageIO.read(url);
